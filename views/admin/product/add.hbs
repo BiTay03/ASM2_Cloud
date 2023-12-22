@@ -1,0 +1,41 @@
+<div class='page-wrapper' id='main-wrapper' data-layout='vertical'
+    data-navbarbg='skin6' data-sidebartype='full'
+    data-sidebar-position='fixed' data-header-position='fixed'>
+    <div class='body-wrapper'>
+
+        <div class='container-fluid mt-4'>
+            <div class='card'>
+                <form action="/product/add" method="post">
+                    <h1>Add new Product</h1>
+                    Product name: <input type="text" name="name" id required>
+                    <br><br>
+                    Color: <input type="radio" name="color" value="Black"> Black
+                    <input type="radio" name="color" value="White"> White
+                    <input type="radio" name="color" value="Yellow"> Yellow
+                    <input type="radio" name="color" value="Blue"> Blue
+                    <br><br>
+                    Product image: <input type="url" name="image" id required>
+                    <br><br>
+                    Product price: <input type="text" name="price" id required>
+                    <br><br>
+                    {{!-- Product country:
+                    <select name="country" class="form-control">
+                        {{#each categories }}
+                        <option value="{{ _id }}"> {{name}}</option>
+                        {{/each}}
+                    </select> --}}
+                    <br><br>
+                    Product Category:
+                    <select name="category" class="form-control">
+                        {{#each categories }}
+                        <option value="{{ _id }}"> {{name}}</option>
+                        {{/each}}
+                    </select>
+                    <br><br>
+                    <button type="submit" class = 'btn btn-outline-warning'>Add</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

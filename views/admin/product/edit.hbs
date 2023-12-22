@@ -1,0 +1,66 @@
+<div class='page-wrapper' id='main-wrapper' data-layout='vertical'
+    data-navbarbg='skin6' data-sidebartype='full'
+    data-sidebar-position='fixed' data-header-position='fixed'>
+    <div class='body-wrapper'>
+
+        <div class='container-fluid mt-4'>
+            <div class='card'>
+                <form action="/product/edit/{{ product._id }}" method="post">
+                    <h1>Edit Product</h1>
+                    Product name: <input type="text" name="name" id
+                        value="{{ product.name }}"
+                        required>
+                    <br><br>
+                    Product price: <input type="text" name="price" id
+                        value="{{ product.price }}"
+                        required>
+                    <br><br>
+
+                    Product image: <input type="url" name="image" id required
+                        value="{{ product.image }}">
+                    <img src="{{ product.image }}" alt width="100" height="100">
+                    <br><br>
+
+                    Product color:
+                    {{#equal product.color "Black"}}
+                    <input type="radio" name="color" value="Black"
+                        checked="true"> Black
+                    <input type="radio" name="color" value="White"> White
+                    <input type="radio" name="color" value="Yellow"> Yellow
+                    <input type="radio" name="color" value="Blue"> Blue
+                    {{/equal}}
+                    {{#equal product.color "White"}}
+                    <input type="radio" name="color" value="Black"> Black
+                    <input type="radio" name="color" value="White"
+                        checked="true"> White
+                    <input type="radio" name="color" value="Yellow"> Yellow
+                    <input type="radio" name="color" value="Blue"> Blue
+                    {{/equal}}
+                    {{#equal product.color "Yellow"}}
+                    <input type="radio" name="color" value="Black"> Black
+                    <input type="radio" name="color" value="White"> White
+                    <input type="radio" name="color" value="Yellow"
+                        checked="true">
+                    Yellow
+                    <input type="radio" name="color" value="Blue"> Blue
+                    {{/equal}}
+                    {{#equal product.color "Blue"}}
+                    <input type="radio" name="color" value="Black"> Black
+                    <input type="radio" name="color" value="White"> White
+                    <input type="radio" name="color" value="Yellow"> Yellow
+                    <input type="radio" name="color" value="Blue"
+                        checked="true"> Blue
+                    {{/equal}}
+                    <br> <br>
+                    {{!-- Product Category: <input type="text" name="category"
+                        value="{{ product.category }}">
+                    <br><br> --}}
+
+                    {{!-- <input type="submit" value="Edit"> --}}
+                    <button type="submit"
+                        class='btn btn-outline-warning'>Edit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

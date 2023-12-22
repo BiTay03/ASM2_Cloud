@@ -1,0 +1,24 @@
+<div class='page-wrapper' id='main-wrapper' data-layout='vertical'
+    data-navbarbg='skin6' data-sidebartype='full'
+    data-sidebar-position='fixed' data-header-position='fixed'>
+    <div class='body-wrapper'>
+
+        <div class='container-fluid mt-4'>
+            <div class='card'>
+                <form action="/category/add" method="post">
+                    <h1>Add new category</h1>
+                    Category name: <input type="text" name="name" id required>
+                    <br><br>
+                    Category country: <input type="text" name="country" id
+                        required>
+                    <br><br>
+                    {{!-- <input type="submit" class='btn btn-outline-warning'
+                        value="Add"> --}}
+                    <button type="submit" class='btn btn-outline-warning'>Add</button>
+                   
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
