@@ -9,6 +9,8 @@ var ProductSchema = mongoose.Schema({
     ref: 'categories', //'categories': collection
   },
   //Relationship : products(many) - categorys(one)
+  quantity: Number,
+  date: String,
 });
 
 var ProductModel = mongoose.model('products', ProductSchema); // 'products' : collection

@@ -52,11 +52,21 @@
                         checked="true"> Blue
                     {{/equal}}
                     <br> <br>
+                    Quantity: <input type="text" name="quantity" id
+                        value="{{ product.quantity }}"
+                        required>
+                    <br> <br>
+                    Date: <input type="date" name="date" id
+                        value="{{ product.date }}"
+                        required>
+
                     {{!-- Product Category: <input type="text" name="category"
                         value="{{ product.category }}">
                     <br><br> --}}
 
                     {{!-- <input type="submit" value="Edit"> --}}
+
+                    <br><br>
                     <button type="submit"
                         class='btn btn-outline-warning'>Edit</button>
                 </form>
